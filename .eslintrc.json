@@ -6,6 +6,7 @@
   "react-hooks/rules-of-hooks": "warn",
   "react/no-unescaped-entities": "off",
   "@typescript-eslint/no-empty-object-type": "off",
-  "@typescript-eslint/no-unused-expressions":"off"
+  "@typescript-eslint/no-unused-expressions":"off",
+  "@next/next/no-title-in-document-head":"off"
   }
 }
