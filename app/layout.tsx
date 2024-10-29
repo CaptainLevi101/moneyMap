@@ -4,7 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import RootProviders from "@/components/providers/RootProviders";
 import { Toaster } from "@/components/ui/sonner";
-import { cn } from "@/lib/utils";
+
 
 
 
@@ -21,7 +21,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "MoneyMap",
-  description: "Bubdget App",
+  description: "Budget App",
 };
 
 export default function RootLayout({
@@ -30,24 +30,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+   
       <html lang="en"
       className="dark"
       style={{
         colorScheme:"dark"
       }}
       >
+          <ClerkProvider>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased w-full pl-4 pr-4`}
         >
+          
          <Toaster richColors position="bottom-left"/>
           <RootProviders>
           {children}
           </RootProviders>
           
+          
         </body>
+        </ClerkProvider>
       </html>
-    </ClerkProvider>
+  
 
   );
 }
