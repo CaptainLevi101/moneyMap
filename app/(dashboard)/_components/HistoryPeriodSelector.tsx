@@ -66,7 +66,7 @@ function YearSelector({period,setPeriod,years}:{
     years:GetHistoryPeriodsResponseType;
 }){
     return(
-        <Select value={period.year.toString()}
+        <Select value={period.year?.toString()}
         onValueChange={(value)=>{
             setPeriod({
                 month:period.month,
@@ -78,7 +78,7 @@ function YearSelector({period,setPeriod,years}:{
             </SelectTrigger>
             <SelectContent>
                 {years.map((year)=>(
-                    <SelectItem key={year as number} value={year.toString()}>
+                    <SelectItem key={year as number} value={year?.toString()}>
                         {year as number}
                     </SelectItem>
                 ))}
