@@ -7,7 +7,7 @@ import { Category } from "@prisma/client";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useState } from "react";
 import CreateCategoryDialog from "./CreateCategoryDialog";
-import { Check, ChevronsUpDown, ChevronUpIcon } from "lucide-react";
+import { Check, ChevronsUpDown} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 
